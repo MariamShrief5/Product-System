@@ -1,0 +1,53 @@
+body{
+    font-family: "Lora", serif;
+}
+
+.form-control{
+    color: white;
+    background-color: rgba(128, 128, 128, 0.523);
+    border: none;
+    font-family: var(--bs-font-sans-serif);
+}
+
+label{
+    font-family: var(--bs-font-sans-serif);
+    color: white;
+}
+
+.form-control::placeholder{
+    color: transparent !important;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    background-color: rgba(128, 128, 128, 0.523);
+    color: white;
+}
+
+textarea{
+    min-height: 200px;
+    max-height: 200px;
+    resize: vertical;
+}
+
+.inner{
+    background-color: rgba(34, 34, 34, 0.654);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.inner img{
+    height: 200px;
+    object-fit: contain;
+}
+
+input[type="search"]::placeholder{
+    color: white !important;
+}
+
+#updateBtn{
+    display: none;
+}

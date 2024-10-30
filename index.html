@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product System</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Google Font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Main CSS bg-grey  -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  
+    <section class="bg-black min-vh-100">
+        <div class="container">
+            <h1 class="py-5 text-center text-white">Product Managment System</h1>
+            <form>
+                
+                <div class="alert alert-danger d-none" id="existMes">This product already exist</div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="name" placeholder="Name" autocomplete="off" oninput="nameValidation()">
+                    <label for="name">Name</label>
+                      <h3 class="text-danger h6 ps-2" id="nameValid"></h3>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="category" placeholder="Category" list="categories" autocomplete="off">
+                    <label for="category">Category</label>
+                    <datalist id="categories">
+                        <option>Mobile</option>
+                        <option>Laptop</option>
+                        <option>Screen</option>
+                        <option>Camera</option>
+                        <option>Clothes</option>
+                    </datalist>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="price" placeholder="Price" autocomplete="off">
+                    <label for="price">Price</label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <textarea class="form-control" id="description" placeholder="Description" autocomplete="off"></textarea>
+                    <label for="description">Description</label>
+                  </div>
+
+                  <div class="mb-3">
+                    <input type="file" name="fileName" id="fileInput" class="form-control" accept="image/*">
+                  </div>
+                
+                  <button class="btn btn-primary" type="button" onclick="addProduct()" id="addBtn">Add Product</button>
+                  <button class="btn btn-success" type="button" id="updateBtn" onclick="updateData()">Update Product</button>
+
+            </form>
+
+            <input type="search" placeholder="Search Products" class="form-control w-75 mx-auto my-4 p-2" oninput="searchProduct()" id="searchInput">
+
+            <div class="row mt-5" id="productContainer">
+              
+            </div>
+        </div>
+    </section>
+    
+
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/main.js"></script>    
+</body>
+</html>
